@@ -210,13 +210,13 @@ function updateScore() {
 
 const colors = [
   null,
-  '#FF0D72',
-  '#0DC2FF',
-  '#0DFF72',
-  '#F538FF',
-  '#FF8E0D',
-  '#FFE138',
-  '#3877FF',
+  '#a29bfe',
+  '#fab1a0',
+  '#00b894',
+  '#fdcb6e',
+  '#e17055',
+  '#BDC581',
+  '#3B3B98',
 ]
 
 const arena = createMatrix(12, 20);
@@ -230,6 +230,26 @@ const player = {
   score: 0
 
 }
+
+const leftBtn = document.getElementById('left').addEventListener('click', event => {
+  playerMove(-1)
+})
+
+const downBtn = document.getElementById('down').addEventListener('click', event => {
+  playerDrop()
+})
+
+const rightBtn = document.getElementById('right').addEventListener('click', event => {
+  playerMove(+1)
+})
+
+const rotateLeftBtn = document.getElementById('rotateLeft').addEventListener('click', event => {
+  playerRotate(-1)
+})
+const rotateRightBtn = document.getElementById('rotateRight').addEventListener('click', event => {
+  playerRotate(1)
+})
+
 
 document.addEventListener('keydown', event => {
   if (event.keyCode === 37) {
