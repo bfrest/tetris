@@ -187,8 +187,12 @@ function rotate(matrix, dir) {
   }
 }
 
+function speedUpDrop() {
+  dropInterval -= 100
+}
+
 let dropCounter = 0
-let dropInterval = 1000
+let dropInterval = 500;
 let lastTime = 0
 
 function update(time = 0) {
@@ -264,6 +268,14 @@ document.addEventListener('keydown', event => {
     playerRotate(1)
   }
 })
+
+setInterval(function () {
+  if (dropInterval <= 200) {
+    return
+  } else {
+    speedUpDrop()
+  }
+}, 10000);
 
 playerReset();
 updateScore();
