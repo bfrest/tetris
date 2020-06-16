@@ -275,7 +275,7 @@ setInterval(function () {
   } else {
     speedUpDrop()
   }
-}, 10000);
+}, 60000);
 
 playerReset();
 updateScore();
