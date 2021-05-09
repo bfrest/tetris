@@ -1,1 +1,1 @@
-A gane of tetris, built while learning about canvas
+A game of tetris, built while learning about canvas
