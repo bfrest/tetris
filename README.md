@@ -1,1 +1,1 @@
-A game of tetris, built while learning about canvas
+Tetris, one of my favorite games I built while learning about canvas.
